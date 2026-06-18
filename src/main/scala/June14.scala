@@ -19,7 +19,7 @@ object June14 {
         .load()
 
 
-    df.show(5,false)
+    df.show()
 
     df.printSchema()
 
