@@ -15,6 +15,6 @@ job = Job(glueContext)
 job.init(args['JOB_NAME'], args)
 
 df=spark.read.format("csv").option("header",True).option("path","s3://source-bucket-july-ap-southeast-02/details.csv").load()
-df.write.mode("overwrite").format("csv").option("header",True).option("path","s3://target-bucket-july-ap-southeast-02/TriggeredViaLambda").save()
+df.write.mode("overwrite").format("csv").option("header",True).option("path","s3://target-bucket-july-ap-southeast-02/TriggeredViaLambda-2").save()
 
 job.commit()
